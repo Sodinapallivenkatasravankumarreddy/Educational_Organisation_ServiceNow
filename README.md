@@ -75,6 +75,7 @@ Field Disabling: Prevents manual entry of calculated fields.
 Created a visual flow for Admission Status:
 
 New → InProgress → Joined → Rejected → Rejoined → Closed → Cancelled
+
 🚀 Features
 
 📌 Dynamic Forms with onChange logic

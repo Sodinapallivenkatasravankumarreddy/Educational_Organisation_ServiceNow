@@ -1,3 +1,10 @@
+
+🎓 Educational Organisation Management System using ServiceNow
+
+A ServiceNow-based application that automates student admissions, academic tracking, and result evaluation in an educational institution.
+
+────────────────────────────────
+
 👥 Team Information
 
 Team ID: LTVIP2026TMIDS79862  
@@ -8,111 +15,164 @@ Team Members
 • Ramavathu Durga Prasad Naik  
 • Sodinapalli Venkata Sravan Kumar Reddy  
 
+────────────────────────────────
 
-📘 Overview
+📘 Project Overview
 
-This project is a custom-built Educational Management System developed using the ServiceNow platform. It automates the core academic processes including student admissions, academic tracking, and data management. It leverages ServiceNow features like custom tables, form design, client scripts, process flows, and number maintenance to deliver a scalable and low-code solution tailored for educational institutions.
+This project implements a complete Educational Organisation Management System using the ServiceNow platform.  
+It replaces manual admission and academic tracking with an automated, structured workflow.
 
-🎯 Key Objectives
+The system manages  
+• Student admissions  
+• Academic records  
+• Automatic result calculation  
 
-✅ Streamline student admission and academic record workflows.
-✅ Automate field calculations and status updates.
-✅ Enhance user experience with dynamic forms.
-✅ Maintain centralized and secure student information.
-✅ Provide lifecycle visibility using visual process flows.
-✅ Enable scalability for future modules (fees, faculty, etc.).
+The solution significantly reduces manual effort and improves data accuracy through automation.
 
-🧰 Technologies Used
+────────────────────────────────
 
-ServiceNow Developer Instance
-ServiceNow Studio
-Form Designer
-Client Scripts (JavaScript)
-Process Flow Designer
-Number Maintenance
-Local Update Sets
+🎯 Objectives
 
-🏗️ Modules Created
+• Automate the admission workflow  
+• Maintain structured student and parent records  
+• Automatically calculate total, percentage, and result  
+• Reduce manual admission processing time using automation  
 
-📌 Salesforce Table (Base Table)
+────────────────────────────────
 
-Stores core student information:
+🛠️ Technologies Used
 
-Admin Number (Auto-generated)
-Student Name, Grade
-Father & Mother Name, Contact Numbers
-Admission Date
-🔹 Extensible table used as a parent for Admission and Progress tables.
+Platform: ServiceNow (Personal Developer Instance)  
+Scripting Language: JavaScript  
 
-📌 Admission Table
+ServiceNow Features Used  
+• Custom Tables  
+• Forms and Layouts  
+• Process Flows  
+• Number Maintenance  
+• Client Scripts  
 
-Handles all student enrollment activities:
+────────────────────────────────
 
-Admission Status (New, InProgress, Joined, etc.)
-Purpose of Joining
-School and Area Information
-Location Details (Auto-filled via Pincode)
-🔹 Includes client scripts for field auto-population and status handling.
+🏗️ Architecture Overview
 
-📌 Student Progress Table
+The system follows a modular and layered architecture built entirely on the ServiceNow platform.
 
-Tracks academic performance:
+• Data Layer  
+  Custom tables store student, admission, and academic data.
 
-Marks in 6 subjects (Telugu, Hindi, English, Maths, Science, Social)
-Total Marks (auto-calculated)
-Percentage (auto-calculated)
-Result (Pass/Fail)
-🔹 Client scripts handle calculations and field disabling for accuracy.
+• Application Layer  
+  Forms, layouts, and reference relationships manage user interaction.
 
-🧠 Client Scripts Implemented
+• Automation Layer  
+  Client scripts and process flows handle calculations, validations, and workflow transitions.
 
-Auto-populate Student Details: Fetches Salesforce data into Admission form.
-Pincode-Based Location Autofill: Dynamically updates Mandal, City, District.
-Total/Percentage/Result Calculation: Based on subject marks.
-Field Disabling: Prevents manual entry of calculated fields.
-🔄 Process Flow
+• Presentation Layer  
+  Clean, user-friendly forms for admissions and student progress tracking.
 
-Created a visual flow for Admission Status:
+This architecture ensures scalability, maintainability, and real-world enterprise alignment.
 
-New → InProgress → Joined → Rejected → Rejoined → Closed → Cancelled
+────────────────────────────────
 
-🚀 Features
+🏗️ System Design
 
-📌 Dynamic Forms with onChange logic
+📂 Tables Used
 
-🛡️ Data Integrity via field disabling and validations
-📊 Real-time Result Calculations
-🔄 Status Lifecycle Management
-🔢 Unique ID generation using Number Maintenance
-📁 Modular Design with Update Set support
-📈 Outcomes
+1️⃣ Salesforce Table  
+• Base table for the system  
+• Stores student and parent details  
+• Auto-generated Admin Number  
 
-Reduced manual effort in admissions
-Zero calculation errors in student results
-Transparent admission status tracking
-Improved administrative efficiency
-Scalable for future use-cases like Fees, Exams, Faculty
+2️⃣ Admission Table  
+• Extends Salesforce table  
+• Admission lifecycle  
+  New → In Progress → Joined → Rejected → Rejoined → Closed → Cancelled  
+• Auto-population of student details  
+• Pincode-based address automation  
 
-🔮 Future Enhancements
+3️⃣ Student Progress Table  
+• Subject-wise marks entry  
+• Automatic calculation of  
+  Total  
+  Percentage  
+  Result (Pass or Fail)  
+• Calculated fields are locked to prevent manual changes  
 
-📧 Email/SMS Notifications for Admission Updates
-📱 Mobile Support for Students and Admins
-📊 Dashboards for Real-Time Analytics
-🧑‍🏫 Faculty & Class Module
-💳 Fee Management System
-🧾 Report Cards & Certifications
-🔗 Integration with LMS platforms
+────────────────────────────────
 
-📎 Project Setup Steps
+⚙️ Automation and Client Scripts
 
-Sign up at developer.servicenow.com
-Request a Personal Developer Instance.
-Log into the instance and open Studio.
-Create custom tables: Salesforce, Admission, Student Progress.
-Create and configure forms using Form Designer.
-Add Client Scripts, Process Flow, and Number Maintenance.
-Capture everything in a Local Update Set.
-Test and validate workflows, field behavior, and UI layouts.
+The following client scripts are implemented to automate the system  
+
+• Auto Populate Script  
+• Pincode Update Script  
+• Disable Fields Script  
+• Total Calculation Script  
+• Percentage Calculation Script  
+• Result Evaluation Script  
+
+These scripts ensure accuracy, consistency, and reduced manual dependency.
+
+────────────────────────────────
+
+🧪 Testing and Validation
+
+The application was tested using multiple real-time scenarios to ensure reliability.
+
+• Validated admission workflow transitions  
+• Verified auto-population of student details  
+• Tested subject mark entry and calculations  
+• Ensured total, percentage, and result accuracy  
+• Checked field locking and validation rules  
+
+All modules were tested successfully with consistent and accurate results.
+
+────────────────────────────────
+
+▶️ How to Use the Project
+
+1. Create a ServiceNow Personal Developer Instance  
+2. Configure tables and columns  
+3. Design forms and layouts  
+4. Add client scripts and process flows  
+5. Test admission and student progress workflows  
+
+────────────────────────────────
+
+✅ Project Outcome
+
+• Fully automated admission process  
+• Accurate academic evaluation  
+• Reduced manual processing time  
+• Clean and professional ServiceNow implementation  
+
+────────────────────────────────
+
+🌟 Notable Contributions
+
+• Outstanding handling of outstanding dues logic and accrued interest concepts  
+• Reduced manual admission processing time by automating workflows and calculations  
+• Strong focus on testing, validation, and workflow accuracy  
+
+────────────────────────────────
+
+📘 Learning Outcomes
+
+• Hands-on experience with ServiceNow development  
+• Understanding of enterprise-level workflows  
+• Practical exposure to automation, scripting, and validation  
+
+────────────────────────────────
+
+🙏 Acknowledgement
+
+We sincerely thank our mentors and training program for their guidance and support in completing this internship project.
+
+────────────────────────────────
+
+📄 License
+
+This project is developed for educational and internship purposes only.
 
 Demo Link :
 

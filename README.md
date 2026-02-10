@@ -8,41 +8,92 @@ Team Members
 • Ramavathu Durga Prasad Naik  
 • Sodinapalli Venkata Sravan Kumar Reddy  
 
-📘 Project Overview
 
-This project demonstrates how to build and manage an Educational Organisation System using ServiceNow. It covers the creation of custom tables, workflows, and forms to handle educational data such as admissions, student progress, and records. The goal is to showcase how ServiceNow can streamline processes, automate workflows, and centralize data management in an academic setting.
+📘 Overview
+This project is a custom-built Educational Management System developed using the ServiceNow platform. It automates the core academic processes including student admissions, academic tracking, and data management. It leverages ServiceNow features like custom tables, form design, client scripts, process flows, and number maintenance to deliver a scalable and low-code solution tailored for educational institutions.
 
-Statement: The Educational Management System is a comprehensive platform designed to streamline administrative tasks within educational institutions. It facilitates efficient management of student and teacher data, simplifies the admission process, and provides tools for monitoring student progress.
+🎯 Key Objectives
+✅ Streamline student admission and academic record workflows.
+✅ Automate field calculations and status updates.
+✅ Enhance user experience with dynamic forms.
+✅ Maintain centralized and secure student information.
+✅ Provide lifecycle visibility using visual process flows.
+✅ Enable scalability for future modules (fees, faculty, etc.).
+🧰 Technologies Used
+ServiceNow Developer Instance
+ServiceNow Studio
+Form Designer
+Client Scripts (JavaScript)
+Process Flow Designer
+Number Maintenance
+Local Update Sets
+🏗️ Modules Created
+📌 Salesforce Table (Base Table)
+Stores core student information:
 
-📌 Project Overview
+Admin Number (Auto-generated)
+Student Name, Grade
+Father & Mother Name, Contact Numbers
+Admission Date
+🔹 Extensible table used as a parent for Admission and Progress tables.
 
-Educational institutions deal with large amounts of data related to students, admissions, and faculty. Manual handling can be time-consuming and error-prone. With ServiceNow, these processes can be automated and digitized for better efficiency.
+📌 Admission Table
+Handles all student enrollment activities:
 
-This project includes:
+Admission Status (New, InProgress, Joined, etc.)
+Purpose of Joining
+School and Area Information
+Location Details (Auto-filled via Pincode)
+🔹 Includes client scripts for field auto-population and status handling.
 
-Setting up a ServiceNow instance Creating update sets for version management Designing and managing custom tables Building forms and layouts for user-friendly input Maintaining student records and progress
+📌 Student Progress Table
+Tracks academic performance:
 
-🚀 Features Implemented
+Marks in 6 subjects (Telugu, Hindi, English, Maths, Science, Social)
+Total Marks (auto-calculated)
+Percentage (auto-calculated)
+Result (Pass/Fail)
+🔹 Client scripts handle calculations and field disabling for accuracy.
 
-✅ ServiceNow Setup Configured ServiceNow instance and update sets.
+🧠 Client Scripts Implemented
+Auto-populate Student Details: Fetches Salesforce data into Admission form.
+Pincode-Based Location Autofill: Dynamically updates Mandal, City, District.
+Total/Percentage/Result Calculation: Based on subject marks.
+Field Disabling: Prevents manual entry of calculated fields.
+🔄 Process Flow
+Created a visual flow for Admission Status:
 
-✅ Custom Tables Salesforce Table – Stores Salesforce-related educational data. Admission Table – Records student admission details. Student Progress Table – Tracks academic progress of students.
-
-✅ Form Layout & Design Customized forms for easy data entry. User-friendly layouts to view and manage student/organization details.
-
-✅ Centralized Data Management Secure and structured record-keeping. Efficient retrieval and updates of educational records.
-
-🛠️ Tech Stack
-
-Platform: ServiceNow Modules Used: Update Sets, Table Creation, Form Layouts, Form Design Category: Educational Workflow Automation
-
-🎯 Learning Outcomes
-
-Working with ServiceNow instances. Creating and managing update sets. Designing custom tables and forms. Automating educational workflows.
-
-📌 Use Case
-
-This project can be extended to real-world schools, colleges, and universities to: Digitize student admission processes. Track and analyze student performance. Manage faculty and administrative workflows.
+New → InProgress → Joined → Rejected → Rejoined → Closed → Cancelled
+🚀 Features
+📌 Dynamic Forms with onChange logic
+🛡️ Data Integrity via field disabling and validations
+📊 Real-time Result Calculations
+🔄 Status Lifecycle Management
+🔢 Unique ID generation using Number Maintenance
+📁 Modular Design with Update Set support
+📈 Outcomes
+Reduced manual effort in admissions
+Zero calculation errors in student results
+Transparent admission status tracking
+Improved administrative efficiency
+Scalable for future use-cases like Fees, Exams, Faculty
+🔮 Future Enhancements
+📧 Email/SMS Notifications for Admission Updates
+📱 Mobile Support for Students and Admins
+📊 Dashboards for Real-Time Analytics
+🧑‍🏫 Faculty & Class Module
+💳 Fee Management System
+🧾 Report Cards & Certifications
+🔗 Integration with LMS platforms
+📎 Project Setup Steps
+Sign up at developer.servicenow.com
+Request a Personal Developer Instance.
+Log into the instance and open Studio.
+Create custom tables: Salesforce, Admission, Student Progress.
+Create and configure forms using Form Designer.
+Add Client Scripts, Process Flow, and Number Maintenance.
+Capture everything in a Local Update Set.
+Test and validate workflows, field behavior, and UI layouts.
 
 Demo Link :
 

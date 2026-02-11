@@ -1,4 +1,4 @@
-🎓 Educational Organisation Management System using ServiceNow
+🎓 Educational Organisation using ServiceNow
 
 A ServiceNow-based application that automates student admissions, academic tracking, and result evaluation in an educational institution.
 
